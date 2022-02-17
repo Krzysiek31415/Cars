@@ -27,8 +27,8 @@ void PetrolEngine::changeGear(int gear)
 
     if(gear < -1 || gear > gears_)
     {
-        //throw InvalidGear("There is no such gear.");
-        throw InvalidGear();
+        throw InvalidGear("There is no such gear.");
+        //throw InvalidGear();
     }
 
     if( (currentGear_ > 1 && gear == -1) ||
