@@ -9,10 +9,10 @@ int main()
         
         std::cout << "\tPetrol ************************************************************\n";
 
-        PetrolCar opel(new PetrolEngine(120, 1800, 6));
+        PetrolCar opel(new PetrolEngine(120_hp, 1800_ccm, 6));
 
         Car * car = &opel;
-        car->accelerate(10);
+        car->accelerate(10_km_h);
 
         std::cout << " Current gear: " << opel.getPetrolEngine().getCurrentGear() << '\n';
         opel.getPetrolEngine().changeGear(2);
@@ -39,7 +39,7 @@ int main()
 
     // {
     //     std::cout << "\tElectric ************************************************************\n";
-    //     ElectricCar tesla(new ElectricEngine(800, 100'000));
+        ElectricCar tesla(new ElectricEngine(800_hp, 45_Ah));
     //     std::cout << "Show tesla: " << tesla << '\n';
     //     ElectricCar kia(new ElectricEngine(300, 150'000));
 

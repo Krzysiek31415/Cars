@@ -1,11 +1,12 @@
 #pragma once
 #include "Engine.hpp"
 #include <iostream>
+#include "Power.hpp"
 
 class Engine 
 {
 public:
-    Engine(int power);
+    Engine(Power power);
 
     Engine(const Engine &) = default;
     Engine(Engine &&) = default;
@@ -15,9 +16,9 @@ public:
 
     virtual ~Engine();
 
-    void setPower(int power){ power_ = power; }
-    int getPower() const {return power_; }
+    void setPower(Power power){ power_ = power; }
+    Power getPower() const {return power_; }
 
 private:
-    int power_;             // in HP 
+    Power power_;             // in HP 
 };

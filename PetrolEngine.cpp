@@ -1,11 +1,11 @@
 #include <iostream>
 
-#include "exceptions.hpp"
+#include "InvalidGear.hpp"
 #include "PetrolEngine.hpp"
 
 
 
-PetrolEngine::PetrolEngine(int power, float capacity, int gears)
+PetrolEngine::PetrolEngine(Power power, EngineCapacity capacity, int gears)
     : Engine(power)
     , capacity_(capacity)
     , gears_(gears)

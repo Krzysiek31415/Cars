@@ -1,13 +1,13 @@
 #include "catch_amalgamated.hpp"
-#include "../exceptions.hpp"
+#include "../InvalidGear.hpp"
 #include "../PetrolEngine.hpp"
 #include "../Engine.hpp"
 
 
 SCENARIO( "shifting gears", "[GEARS]" ) {
 
-    GIVEN( "PetrolEngine Object: engine(100, 2000, 5)" ) {
-        PetrolEngine engine{100, 1.9, 5};
+    GIVEN( "PetrolEngine Object: engine(100_hp, 2000, 5)" ) {
+        PetrolEngine engine{100_hp, 1900_ccm, 5};
 
         WHEN( "after definition" ) {
             THEN( "number of gears = 5" ) {

@@ -14,6 +14,6 @@ void Car::turnRight()     { std::cout << __FUNCTION__ << std::endl; }
 
 void Car::brake()         { std::cout << __FUNCTION__ << std::endl; }
 
-void Car::accelerate(int) { std::cout << __FUNCTION__ << std::endl; }
+void Car::accelerate(Speed) { std::cout << __FUNCTION__ << std::endl; }
 
 void Car::refuel()        { std::cout << __FUNCTION__ << std::endl; }

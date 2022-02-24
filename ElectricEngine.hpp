@@ -1,10 +1,11 @@
 #pragma once
 #include "Engine.hpp"
+#include "ElectricCapacity.hpp"
 
 class ElectricEngine : public Engine
 {
 public:
-    ElectricEngine(int power, int batteryCapacity);
+    ElectricEngine(Power power, ElectricCapacity batteryCapacity);
 
     ElectricEngine(ElectricEngine const &) = default;
     ElectricEngine(ElectricEngine &&) = default;
@@ -14,11 +15,11 @@ public:
 
     ~ElectricEngine() override;
     
-    int getBatteryCapacity() const { return batteryCapacity_; }
+    ElectricCapacity getBatteryCapacity() const { return batteryCapacity_; }
 
     friend std::ostream & operator<<(std::ostream & out, ElectricEngine const & engine);
 
 private:
-    int batteryCapacity_;   // in Ah
+    ElectricCapacity batteryCapacity_;   // in Ah
 };
 

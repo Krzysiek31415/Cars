@@ -49,3 +49,7 @@ googletest/
 *.exe
 *.out
 *.app
+
+
+#files
+temp.cpp
